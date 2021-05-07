@@ -1,30 +1,75 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div>
+    <div class="header">
+      <img src="@/assets/friends-icon.svg" alt="" />
+      <p>Friends List</p>
+    </div>
+    <div class="bottom-area">
+      <router-link to="/">
+        <img class="icon" src="@/assets/home-icon.svg" alt="" />
+      </router-link>
+      <router-link to="/about">
+        <img class="icon" src="@/assets/abt-icon.svg" alt="" />
+      </router-link>
+    </div>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: "Poppins", sans-serif;
+  background-color: #e5e5e5;
+  min-height: 100vh;
+  height: 100%;
+  max-width: 100%;
 }
 
-#nav {
-  padding: 30px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  background-color: #5c3fd7;
+  color: #fff;
+  padding: 10px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.header p {
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.icon {
+  transition: 0.5s;
+}
+
+.router-link-exact-active .icon {
+  transform: scale(1.2) translateY(-7px);
+}
+
+.bottom-area {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 76px;
+  box-shadow: 0px 0 3px rgba(143, 143, 143, 0.8);
+  z-index: 2;
 }
 </style>
