@@ -31,11 +31,7 @@
             </p>
             <p class="age">
               <span class="label">Age</span><br />
-              {{ personalDetail.age }}
-            </p>
-            <p class="religion">
-              <span class="label">Religion</span><br />
-              {{ personalDetail.religion }}
+              {{ personalDetail.birthmonth }} {{ personalDetail.birthday }}
             </p>
           </div>
         </div>
@@ -56,9 +52,9 @@ const query = `*[slug.current == $slug]{
   lastname,
   nickname,
   slug,
-  age,
+  birthday,
   phoneNumber,
-  religion,
+  birthmonth,
   "image": profileImage{
   asset->{
   _id,
