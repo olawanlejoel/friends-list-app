@@ -30,7 +30,7 @@
               {{ personalDetail.phoneNumber }}
             </p>
             <p class="age">
-              <span class="label">Age</span><br />
+              <span class="label">D.O.B</span><br />
               {{ personalDetail.birthmonth }} {{ personalDetail.birthday }}
             </p>
           </div>
